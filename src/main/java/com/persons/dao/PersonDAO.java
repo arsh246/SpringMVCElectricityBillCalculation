@@ -36,7 +36,7 @@ public class PersonDAO {
                 new BeanPropertyRowMapper<>(Person.class));
     }
 
-    public Person getPersonByConsumedUnits(String units) throws SQLException {
+    public Person getPersonByConsumedUnits(int units) throws SQLException {
         String query = "select * from personsdetails where personsdetails.consumedUnits = ?";
         return jdbcTemplate.queryForObject(query,
                 new Object[]{units},
