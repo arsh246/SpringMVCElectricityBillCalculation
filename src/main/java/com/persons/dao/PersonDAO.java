@@ -1,14 +1,17 @@
 package com.persons.dao;
 import com.persons.beans.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 
 import java.sql.SQLException;
 
+@Repository
 public class PersonDAO {
 
-
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {

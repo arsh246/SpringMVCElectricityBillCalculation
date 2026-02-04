@@ -21,18 +21,4 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/test?serverTimezone=UTC"/>
-        <property name="username" value="Practise"/>
-        <property name="password" value="Password"/>
-    </bean>
-
-    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="ds"/>
-    </bean>
-
-    <bean id="dao" class="com.persons.dao.PersonDAO">
-        <property name="jdbcTemplate" ref="jt"/>
-    </bean>
 </beans>

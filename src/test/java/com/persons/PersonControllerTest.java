@@ -21,7 +21,8 @@ import com.persons.beans.Person;
 import com.persons.controllers.PersonController;
 import com.persons.dao.PersonDAO;
 
-@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring-servlet.xml" })
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/applicationContext.xml",
+        "file:src/main/webapp/WEB-INF/spring-servlet.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 public class PersonControllerTest {
